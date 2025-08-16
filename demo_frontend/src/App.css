@@ -1,0 +1,16 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+input{
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  margin: 0.5em;
+
+}
+#button{
+  padding: 8px;
+  background-color: #d5d5d5;
+}

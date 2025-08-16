@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: event_manage_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: "root@1"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    ports:
+      - "5432:5432"
+
+  backend:
+    build:
+      context: .
+    command: sh /app/entrypoint.sh
+    volumes:
+      - ./backend:/app
+    environment:
+      - DATABASE_URL=postgres://postgres:root%401@db:5432/event_manage_db
+      - SECRET_KEY=django-insecure-REPLACE_ME
+      - DEBUG=1
+      - ALLOWED_HOSTS=localhost,127.0.0.1,backend
+    depends_on:
+      - db
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build:
+      context: ./demo_frontend
+    command: npm run dev -- --host 0.0.0.0
+    volumes:
+      - ./demo_frontend:/app
+    environment:
+      - VITE_API_BASE_URL=http://backend:8000
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:
