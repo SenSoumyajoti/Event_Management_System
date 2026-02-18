@@ -20,7 +20,7 @@ function ForgotPassword() {
     setIsLoading(true);
     
     try {
-      const response = await api.post('/forgot-password/', { email });
+      const response = await api.post('forgot-password/', { email });
       
       // Always show success message even if email doesn't exist (for security)
       setMessage({ 

@@ -8,9 +8,9 @@ import Register from './pages/Register';
 import Profile from './pages/Profile';
 import ForgetPassword from './pages/ForgetPassword';
 import Venues from './pages/Venues';
-import BrowseEvents from './pages/Browse-events';
+import Events from './pages/Events';
 import Header from './components/Header';
-// import Emni from './pages/Emni';
+import CreateEvent from './pages/CreateEvent';
 
 function App() {
 
@@ -42,8 +42,8 @@ function App() {
           <Route path='/profile' element={<Profile/>} />
           <Route path='/forgot-password' element={<ForgetPassword/>} />
           <Route path='/venues' element={<Venues/>} />
-          <Route path='/browse-events' element={<BrowseEvents/>} />
-          
+          <Route path='/events' element={<Events/>} />
+          <Route path="/createevent" element={<CreateEvent />} />
         </Routes>
       </Router>
   )

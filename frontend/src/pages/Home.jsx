@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-// import Header from '../components/Header';
 import api from '../api';
 // import OpenAI from "openai";
 
@@ -18,7 +17,7 @@ const Home = () => {
 
    
 
-    // Function to handle deepseek API call for event ideas
+    // Function to handle chatgpt API call for event ideas
  const generateEventIdeas = async () => {
     setIsLoadingIdeas(true);
     setIdeaError(false);
@@ -27,7 +26,7 @@ const Home = () => {
     
     const data = response.data;
     setEventIdeas(data.ideas.split('\n').map((line, i) => <p key={i}>{line}</p>));
-     } catch (error) {
+} catch (error) {
         setIdeaError(true);
     console.error("Failed to generate ideas:", error);
   }finally{
@@ -128,7 +127,7 @@ const Home = () => {
                         {/* Music Genre Card */}
                         <div className="col-12 col-sm-6 col-md-4 col-lg-3">
                             <div className="card shadow-sm h-100 cursor-pointer">
-                                <img src="/public/music.jpg" className="card-img-top genre-image" alt="Music Events" />
+                                <img src="/music.jpg" className="card-img-top genre-image" alt="Music Events" />
                                 <div className="card-body text-center">
                                     <h3 className="h5 card-title"> Music</h3>
                                     <p className="card-text text-muted">Concerts, festivals, live bands</p>
@@ -139,7 +138,7 @@ const Home = () => {
                         {/* Sports Genre Card */}
                         <div className="col-12 col-sm-6 col-md-4 col-lg-3">
                             <div className="card shadow-sm h-100 cursor-pointer">
-                                <img src="/public/sports.jpg" className="card-img-top genre-image" alt="Sports Events" />
+                                <img src="/sports.jpg" className="card-img-top genre-image" alt="Sports Events" />
                                 <div className="card-body text-center">
                                     <h3 className="h5 card-title"> Sports</h3>
                                     <p className="card-text text-muted">Matches, tournaments, athletic events</p>
@@ -150,7 +149,7 @@ const Home = () => {
                         {/* Arts & Culture Genre Card */}
                         <div className="col-12 col-sm-6 col-md-4 col-lg-3">
                             <div className="card shadow-sm h-100 cursor-pointer">
-                                <img src="\public\workshop1.jpg" className="card-img-top genre-image" alt="Arts & Culture Events" />
+                                <img src="/workshop1.jpg" className="card-img-top genre-image" alt="Arts & Culture Events" />
                                 <div className="card-body text-center">
                                     <h3 className="h5 card-title"> Arts & Culture</h3>
                                     <p className="card-text text-muted">Exhibitions, theater, dance, museums</p>
@@ -161,7 +160,7 @@ const Home = () => {
                         {/* Food & Drink Genre Card */}
                         <div className="col-12 col-sm-6 col-md-4 col-lg-3">
                             <div className="card shadow-sm h-100 cursor-pointer">
-                                <img src="\public\food.jpg" className="card-img-top genre-image" alt="Food & Drink Events" />
+                                <img src="/food.jpg" className="card-img-top genre-image" alt="Food & Drink Events" />
                                 <div className="card-body text-center">
                                     <h3 className="h5 card-title"> Food & Drink</h3>
                                     <p className="card-text text-muted">Festivals, tastings, culinary workshops</p>
@@ -172,7 +171,7 @@ const Home = () => {
                         {/* Technology Genre Card */}
                         <div className="col-12 col-sm-6 col-md-4 col-lg-3">
                             <div className="card shadow-sm h-100 cursor-pointer">
-                                <img src="demo_frontend\public\conferencetech.jpg" className="card-img-top genre-image" alt="Technology Events" />
+                                <img src="/conferencetech.jpg" className="card-img-top genre-image" alt="Technology Events" />
                                 <div className="card-body text-center">
                                     <h3 className="h5 card-title">💻 Technology</h3>
                                     <p className="card-text text-muted">Conferences, hackathons, tech talks</p>
@@ -183,7 +182,7 @@ const Home = () => {
                         {/* Conferences Genre Card */}
                         <div className="col-12 col-sm-6 col-md-4 col-lg-3">
                             <div className="card shadow-sm h-100 cursor-pointer">
-                                <img src="https://placehold.co/400x300/FFA07A/FFFFFF?text=Business+Expo" className="card-img-top genre-image" alt="Conferences" />
+                                <img src="" className="card-img-top genre-image" alt="Conferences" />
                                 <div className="card-body text-center">
                                     <h3 className="h5 card-title">🗣️ Conferences</h3>
                                     <p className="card-text text-muted">Business, academic, networking events</p>
@@ -194,7 +193,7 @@ const Home = () => {
                         {/* Workshops Genre Card */}
                         <div className="col-12 col-sm-6 col-md-4 col-lg-3">
                             <div className="card shadow-sm h-100 cursor-pointer">
-                                <img src="https://placehold.co/400x300/20B2AA/FFFFFF?text=Workshop" className="card-img-top genre-image" alt="Workshops" />
+                                <img src="/workshop.jpg" className="card-img-top genre-image" alt="Workshops" />
                                 <div className="card-body text-center">
                                     <h3 className="h5 card-title">🛠️ Workshops</h3>
                                     <p className="card-text text-muted">Skill-building, creative, hands-on</p>

@@ -3,70 +3,9 @@ import { Card, Container, Row, Col, Form, Button, Badge } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from '../components/Header';
 
-const BrowseEvents = () => {
+const Events = () => {
   // Sample event data
-  const [events, setEvents] = useState([
-    // {
-    //   id: 1,
-    //   title: "Kolkata Music Festival",
-    //   description: "Annual music festival featuring top artists from across India",
-    //   category: "Music",
-    //   date: "2023-11-15",
-    //   location: "Nicco Park, Kolkata",
-    //   price: 500,
-    //   image: "https://source.unsplash.com/random/300x200/?concert"
-    // },
-    // {
-    //   id: 2,
-    //   title: "Eden Gardens Cricket Match",
-    //   description: "IPL match between Kolkata Knight Riders and Mumbai Indians",
-    //   category: "Sports",
-    //   date: "2023-11-20",
-    //   location: "Eden Gardens, Kolkata",
-    //   price: 1500,
-    //   image: "https://source.unsplash.com/random/300x200/?cricket"
-    // },
-    // {
-    //   id: 3,
-    //   title: "Tech Summit 2023",
-    //   description: "Annual technology conference with industry leaders",
-    //   category: "Tech",
-    //   date: "2023-12-05",
-    //   location: "Biswa Bangla Convention Centre",
-    //   price: 2000,
-    //   image: "https://source.unsplash.com/random/300x200/?tech"
-    // },
-    // {
-    //   id: 4,
-    //   title: "Art Exhibition",
-    //   description: "Contemporary art exhibition by local artists",
-    //   category: "Art",
-    //   date: "2023-11-25",
-    //   location: "Victoria Memorial, Kolkata",
-    //   price: 200,
-    //   image: "https://source.unsplash.com/random/300x200/?art"
-    // },
-    // {
-    //   id: 5,
-    //   title: "Food Festival",
-    //   description: "Taste cuisines from around the world",
-    //   category: "Food",
-    //   date: "2023-12-10",
-    //   location: "City Centre, Salt Lake",
-    //   price: 300,
-    //   image: "https://source.unsplash.com/random/300x200/?food"
-    // },
-    // {
-    //   id: 6,
-    //   title: "Heritage Walk",
-    //   description: "Guided tour of Kolkata's historic landmarks",
-    //   category: "Travel",
-    //   date: "2023-11-30",
-    //   location: "North Kolkata",
-    //   price: 150,
-    //   image: "https://source.unsplash.com/random/300x200/?heritage"
-    // }
-  ]);
+  // const [events, setEvents] = useState([ ]);
 
   // State for filters
   const [filters, setFilters] = useState({
@@ -240,4 +179,4 @@ const BrowseEvents = () => {
   );
 };
 
-export default BrowseEvents;
+export default Events;
