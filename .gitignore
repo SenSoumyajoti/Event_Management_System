@@ -7,6 +7,9 @@ Dockerfile
 .env
 .env.*
 !.env.example
+.env
+demo_frontend/.env
+
 
 # ===============================
 # Python / Django
